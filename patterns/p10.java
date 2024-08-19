@@ -12,23 +12,21 @@ public class p10 {
         int st = 1;
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= otsp; j++) {
-                System.out.print(" ");
+                System.out.print("  ");
             }
 
-            System.out.print("*");
+            System.out.print("* ");
 
             for (int j = 1; j <= insp; j++) {
-                System.out.print(" ");
+                System.out.print("  ");
             }
-
-            System.out.print("*");
-
+            if (i > 1 && i < n) {
+                System.out.print("* ");
+            }
             System.out.println();
             if (i <= n / 2) {
                 otsp--;
                 insp += 2;
-            } else if (i > 1 || i < n) {
-                st = 2;
             } else {
                 otsp++;
                 insp -= 2;
